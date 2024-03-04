@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGIJOCKEYS | Portfolio</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../src/css/output.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .border-active {
+        border-color: #43766c;
+        color: #43766c;
+      }
+    </style>
+
+    <!-- Animation Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="bg-background text-abu">
+    <header class="top-0 right-0 left-0 fixed transition-all duration-300 text-background">
+      <nav class="max-w-7xl mx-auto md:p-5 py-5 px-10 font-OpenSans">
+        <div class="flex items-center justify-between">
+          <div>
+            <a class="uppercase tracking-[0.2em] font-bold flex gap-3 items-center hover:text-grn cursor-pointer duration-200">
+              <img src="../src/img/logo.png" alt="" class="w-[25px]" />
+              <span>digijockeys</span>
+            </a>
+          </div>
+          <!-- Desktop -->
+          <div class="hidden md:flex gap-10 items-center">
+            <a href="home.html" class="uppercase hover:text-grn block font-semibold tracking-widest text-[14px] transition duration-200">Home</a>
+            <a href="service.html" class="uppercase hover:text-grn block font-semibold tracking-widest text-[14px] transition duration-200">Services</a>
+            <a href="" class="uppercase text-grn block font-semibold tracking-widest text-[14px] transition duration-200">Portfolio</a>
+            <a href="contact.html" class="uppercase hover:text-grn block font-semibold tracking-widest text-[14px] transition duration-200">Contact Us</a>
+          </div>
+          <!-- Mobie -->
+          <div class="md:hidden">
+            <button id="toggleMenu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden text-center my-5 space-y-10">
+          <a href="home.html" class="uppercase hover:text-grn font-semibold tracking-widest text-[14px] block">Home</a>
+          <a href="service.html" class="uppercase hover:text-grn font-semibold tracking-widest text-[14px] block">Services</a>
+          <a href="" class="uppercase hover:text-grn font-semibold tracking-widest text-[14px] block">Portfolio</a>
+          <a href="contact.html" class="uppercase hover:text-grn font-semibold tracking-widest text-[14px] block">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="w-full h-[600px] grid mb-20 z-10" style="background-image: url(../src/img/bannerBackground.png); background-position: center; background-size: cover">
+      <div class="text-background max-w-7xl mx-auto p-5 self-center flex flex-col">
+        <h1 class="font-Anton text-center xl:tracking-[0.8em] md:tracking-[0.4em] lg:tracking-[0.6em] tracking-[0.2em] xl:text-7xl text-5xl drop-shadow-lg shadow-background animate-bounce">Portfolio</h1>
+      </div>
+    </section>
+
+    <!-- Project -->
+    <section id="about" class="max-w-7xl mx-auto p-5">
+      <div class="flex items-center gap-5 mb-10 flex-wrap">
+        <a href="#" onclick="showElement('showAll'); setActive(this);" class="hover:border-2 hover:border-grn hover:text-grn px-3 py-2 border-2 border-transparent rounded-full transition-all ease-in-out duration-300 border-active"
+          >Show All</a
+        >
+        <a href="#" onclick="showElement('website'); setActive(this);" class="hover:border-2 hover:border-grn hover:text-grn px-3 py-2 border-2 border-transparent rounded-full transition-all ease-in-out duration-300">Website</a>
+        <a href="#" onclick="showElement('designProduct'); setActive(this);" class="hover:border-2 hover:border-grn hover:text-grn px-3 py-2 border-2 border-transparent rounded-full transition-all ease-in-out duration-300"
+          >Design Product</a
+        >
+        <a href="#" onclick="showElement('mockup'); setActive(this);" class="hover:border-2 hover:border-grn hover:text-grn px-3 py-2 border-2 border-transparent rounded-full transition-all ease-in-out duration-300">Mockup</a>
+      </div>
+
+      <div class="font-OpenSans">
+        <div id="showAll"></div>
+        <!-- Website -->
+        <div id="website" class="content grid md:grid-cols-2 gap-4 lg:grid-cols-3 mb-4">
+          <div class="aspect-[4/3] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="h-full w-full">
+              <img src="../src/img/portfolio/web/guestBook/1.png" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-semibold uppercase"><span class="font-bold">Guest Book</span>| UPT Balai Yasa Lahat</h3>
+              <p class="text-white text-center text-sm mb-4">Website</p>
+              <a href="portfolio/guestBook.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+          <div class="aspect-[4/3] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="w-full h-full">
+              <img src="../src/img/portfolio/web/openHouse/1.png" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-semibold uppercase"><span class="font-bold">Open House</span> | UPT Balai Yasa Lahat</h3>
+              <p class="text-white text-center text-sm mb-4">Website</p>
+              <a href="portfolio/openHouse.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+          <div class="aspect-[4/3] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="w-full h-full">
+              <img src="../src/img/portfolio/web/silandung/1.png" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-semibold uppercase"><span class="font-bold">Art Venue Rental Platform</span>| Dinas Kebudayaan Sleman</h3>
+              <p class="text-white text-center text-sm mb-4">Website</p>
+              <a href="portfolio/art.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <!-- Design Product -->
+        <div id="designProduct" class="content grid md:grid-cols-2 gap-4 lg:grid-cols-3 mb-4">
+          <div class="aspect-[3/4] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="w-full h-full">
+              <img src="../src/img/portfolio/designProduct/Bouquet/1.jpg" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-bold uppercase">Bouquet</h3>
+              <p class="text-white text-center text-sm mb-4">Design Product</p>
+              <a href="portfolio/bouquet.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+          <div class="aspect-[3/4] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="w-full h-full">
+              <img src="../src/img/portfolio/designProduct/Flash/1.jpg" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-semibold uppercase">Flash | Sabun Cuci Piring</h3>
+              <p class="text-white text-center text-sm mb-4">Design Product</p>
+              <a href="portfolio/flash.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div id="mockup" class="content grid md:grid-cols-2 gap-4 lg:grid-cols-3 mb-4">
+          <div class="aspect-[4/3] group relative cursor-pointer items-center justify-center overflow-hidden rounded-3xl">
+            <div class="w-full h-full">
+              <img src="../src/img/portfolio/mockup/1.jpg" alt="" class="h-full w-full rounded-lg cursor-pointer transition-transform duration-300 group-hover:scale-110" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div class="absolute inset-0 flex translate-y-[80%] flex-col items-center justify-center px-9 text-center duration-300 group-hover:translate-y-0">
+              <h3 class="text-center text-white font-semibold uppercase">Mockup</h3>
+              <p class="text-white text-center text-sm mb-4">Design Product</p>
+              <a href="portfolio/mockup.html" class="px-3 py-2 rounded-lg hover:bg-grn duration-200 font-semibold text-sm bg-[#19232C] text-white">Lihat selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="w-full bg-[#18222B] text-background font-OpenSans">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-translate-y-5">
+        <path
+          fill="#f0f0f0"
+          fill-opacity="1"
+          d="M0,288L60,256C120,224,240,160,360,133.3C480,107,600,117,720,144C840,171,960,213,1080,213.3C1200,213,1320,171,1380,149.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="max-w-7xl mx-auto p-5 flex flex-col md:flex-row justify-between">
+        <div class="mb-10">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="../src/img/logo.png" alt="" class="w-[25px]" />
+            <h3 class="text-xl font-semibold uppercase">DIGIJOCKEYS</h3>
+          </div>
+          <div class="mb-3 flex items-center">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="translate-x-3">Yogyakarta.</span>
+          </div>
+          <a href="https://api.whatsapp.com/send?text=Halo Admin Digijockeys 👋&phone=6287716221898" target="_blank" class="mb-3 flex items-center hover:text-grn hover:translate-x-3 duration-200">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="translate-x-3">(+62) 877 1622 1898</span>
+          </a>
+          <a href="mailto:digijockeys@gmail.com" class="mb-3 flex items-center hover:text-grn hover:translate-x-3 duration-200">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="translate-x-3">digijockeys@gmail.com</span>
+          </a>
+          <a href="https://www.instagram.com/digijockeys_/" target="_blank" class="mb-3 flex items-center hover:text-grn hover:translate-x-3 duration-200">
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <span class="translate-x-3">@digijockeys_</span>
+          </a>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 uppercase">Quick Link</h3>
+          <div class="flex flex-col gap-4">
+            <a href="home.html" class="hover:text-grn hover:translate-x-2 transition-all ease-in-out duration-300">> Home</a>
+            <a href="service.html" class="hover:text-grn hover:translate-x-2 transition-all ease-in-out duration-300">> Services</a>
+            <a href="" class="hover:text-grn hover:translate-x-2 transition-all ease-in-out duration-300">> Portfolio</a>
+            <a href="contact.html" class="hover:text-grn hover:translate-x-2 transition-all ease-in-out duration-300">> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button Wa -->
+    <section>
+      <!-- Button Wa -->
+      <button class="fixed bottom-4 right-4 bg-green-600 hover:bg-grn text-white text-3xl w-[40px] h-[40px] animate-bounce rounded-full shadow-lg flex items-center justify-center cursor-pointer">
+        <a href="https://api.whatsapp.com/send?text=Halo Admin Digijockeys 👋&phone=6287716221898" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </button>
+    </section>
+
+    <!-- My Js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../src/js/script.js"></script>
+
+    <!-- Show Element -->
+    <script>
+      function showElement(id) {
+        event.preventDefault();
+        var elements = document.querySelectorAll('.content');
+        elements.forEach(function (element) {
+          element.style.display = 'none';
+        });
+
+        if (id === 'showAll') {
+          elements.forEach(function (element) {
+            element.style.display = 'grid';
+          });
+        } else {
+          var targetElement = document.getElementById(id);
+          if (targetElement) {
+            targetElement.style.display = 'grid';
+          }
+        }
+      }
+      function setActive(element) {
+        var buttons = document.querySelectorAll('.border-active');
+        buttons.forEach(function (btn) {
+          btn.classList.remove('border-active');
+        });
+        element.classList.add('border-active');
+      }
+      window.onload = function () {
+        showElement('showAll');
+      };
+    </script>
+
+    <!-- Animation Scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        disable: 'mobile',
+      });
+    </script>
+  </body>
+</html>
